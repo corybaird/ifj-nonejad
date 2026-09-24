@@ -2,8 +2,11 @@
 clear all
 clc
 
-addpath('C:\ijfr\replication_of_submission') %remember to change
-addpath('C:\ijfr\functions') %remember to change
+addpath('functions')
+addpath('data')
+addpath('../functions')
+addpath('../data')
+addpath('.')
 
 N=1; 
 LASTN=maxNumCompThreads(N);

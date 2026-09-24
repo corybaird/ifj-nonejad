@@ -5,8 +5,10 @@ clc
 % mtstream=RandStream('mt19937ar');
 % RandStream.setDefaultStream(mtstream);
 
-addpath('functions')
-addpath('data')
+if exist('functions', 'dir'), addpath('functions'); end
+if exist('data', 'dir'), addpath('data'); end
+if exist('../functions', 'dir'), addpath('../functions'); end
+if exist('../data', 'dir'), addpath('../data'); end
 
 N=1; 
 LASTN=maxNumCompThreads(N);
