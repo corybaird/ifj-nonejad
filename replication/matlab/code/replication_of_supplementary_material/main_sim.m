@@ -1,12 +1,13 @@
  
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
-addpath('functions')
-addpath('data')
 
 mtstream=RandStream('mt19937ar');
-RandStream.setDefaultStream(mtstream); %USE RandStream.setGlobalStream(mtstream) if you get error.
+RandStream.setGlobalStream(mtstream); %USE RandStream.setGlobalStream(mtstream) if you get error.
 
 N=1; 
 LASTN=maxNumCompThreads(N);
@@ -31,7 +32,7 @@ dphi0=0.01;
 dphi1=0.96;
 deta=0.10;
 mcov0=cov(mxc);
-dlam=1; %dlah=[1,1.5,0.5]
+dlam=replication_setting('dlam',1); %dlah=[1,1.5,0.5]
 md=diag(diag(mcov0));
 mcov=md+dlam*(mcov0-md);
 mcov=(mcov+mcov')/2;
@@ -99,5 +100,5 @@ for k=1
     vh=vh(size(vh,1)-size(meps,1)+1:end,:);
     vh=funcMeanc(vh);
     moutc=funcDynamicRotation(meps,mpof,mpdf,mcvl,vh(1:end-ih,1),vlambda,vgam,ih,dalpha);
-    eval(['save simulationl_',int2str(k),'.mat'])    
+    eval(['save simulation_',int2str(replication_setting('sim_idx',k)),'.mat'])    
 end

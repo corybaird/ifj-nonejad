@@ -1,18 +1,19 @@
 
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
 % mtstream=RandStream('mt19937ar');
 % RandStream.setDefaultStream(mtstream);
 
-addpath('functions')
-addpath('data')
 
 N=1; 
 LASTN=maxNumCompThreads(N);
 for k=1
    
-    eval(['load simulation_',int2str(k),'.mat']) 
+    eval(['load simulation_',int2str(replication_setting('sim_idx',k)),'.mat']) 
 
     dalpha=1;
     mml=combvec([5e-1,1e-1,1e-2,1e-3,1e-4,1e-5,1e-6,1e-10],1)';
