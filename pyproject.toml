@@ -1,0 +1,25 @@
+[project]
+name = "nonejad-2026-replication"
+version = "0.1.0"
+description = "Replication of Nonejad (2026), IJF"
+readme = "replication/matlab/README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.1",
+    "scipy>=1.14",
+    "pandas>=2.2.3",
+    "openpyxl>=3.1.5",
+    "xlrd>=2.0.2",
+    "pyyaml>=6.0.2",
+    "matplotlib>=3.9",
+    "pymupdf>=1.24",
+    "pytest>=8.0",
+    "matlabengine",
+]
+
+[tool.uv.sources]
+matlabengine = { path = "/Applications/MATLAB_R2025b.app/extern/engines/python" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["data", "original_files", ".venv", ".git"]

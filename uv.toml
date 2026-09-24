@@ -1,0 +1,4 @@
+# uv configuration for nonejad-2026-replication
+
+python-downloads = "never"
+python-preference = "only-system"
