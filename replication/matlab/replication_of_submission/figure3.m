@@ -2,8 +2,10 @@
 clear all
 clc
 
-addpath('functions')
-addpath('data')
+if exist('functions', 'dir'), addpath('functions'); end
+if exist('data', 'dir'), addpath('data'); end
+if exist('../functions', 'dir'), addpath('../functions'); end
+if exist('../data', 'dir'), addpath('../data'); end
 
 N=1; 
 LASTN=maxNumCompThreads(N);
@@ -112,7 +114,11 @@ end
 vtid=(1990:2025)';
 vtid=vtid(1:end-1,1);
 subplot(2,2,1)
-plot(vtid,vroc(1:end-1,1))
+bar(vtid,vroc(1:end-1,1),'FaceColor','b')
+ylim([0, 0.30]);
+xlim([1989.5, 2024.5]);
+xlabel('Time'); ylabel('Value');
+title({'(a): Logarithm of the one-month-ahead financial', 'uncertainty index suggested in Ludvigson et al. (2021).'});
 
 kk=1;
 for k=10
@@ -216,7 +222,11 @@ end
 vtid=(1990:2025)';
 vtid=vtid(1:end-1,1);
 subplot(2,2,2)
-plot(vtid,vroc(1:end-1,1))
+bar(vtid,vroc(1:end-1,1),'FaceColor','b')
+ylim([0, 0.30]);
+xlim([1989.5, 2024.5]);
+xlabel('Time'); ylabel('Value');
+title({'(b): First difference of the three-month U.S. treasury', 'constant maturity rate.'});
 
 kk=1;
 for k=11
@@ -321,7 +331,11 @@ end
 vtid=(1990:2025)';
 vtid=vtid(1:end-1,1);
 subplot(2,2,3)
-plot(vtid,vroc(1:end-1,1))
+bar(vtid,vroc(1:end-1,1),'FaceColor','b')
+ylim([0, 0.30]);
+xlim([1989.5, 2024.5]);
+xlabel('Time'); ylabel('Value');
+title({'(c): Global economic activity index', 'suggested in Kilian (2009).'});
 
 kk=1;
 for k=15
@@ -425,4 +439,8 @@ end
 vtid=(1990:2025)';
 vtid=vtid(1:end-1,1);
 subplot(2,2,4)
-plot(vtid,vroc(1:end-1,1))
+bar(vtid,vroc(1:end-1,1),'FaceColor','b')
+ylim([0, 0.30]);
+xlim([1989.5, 2024.5]);
+xlabel('Time'); ylabel('Value');
+title({'(d): Logarithm of the monthly Standard & Poor''s', '(S&P) 500 realized volatility.'});

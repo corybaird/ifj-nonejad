@@ -2,8 +2,10 @@
 clear all
 clc
 
-addpath('functions')
-addpath('data')
+if exist('functions', 'dir'), addpath('functions'); end
+if exist('data', 'dir'), addpath('data'); end
+if exist('../functions', 'dir'), addpath('../functions'); end
+if exist('../data', 'dir'), addpath('../data'); end
 
 N=1; 
 LASTN=maxNumCompThreads(N);
@@ -99,17 +101,36 @@ vstart=find(ma(:,end)==1);
 vend=[(find(ma(:,end)==-1)-1)+1;420];
 Recessions=[vtid(vstart,1),vtid(vend,1)];
 subplot(3,2,1)
-plot(vtid,mqn(is:ie,3))
-axis tight;
+plot(vtid,mqn(is:ie,3),'b','LineWidth',1.5)
+hold on;
 recession_bars;
-plot(vtid,mqn(is:ie,3))
-axis tight; 
+plot(vtid,mqn(is:ie,3),'b','LineWidth',1.5)
+axis tight;
+ylim([0, 0.30]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Value');
+title({'(a): Logarithm of the one-month-ahead macroeconomic', 'uncertainty index suggested in Ludvigson et al. (2021).'});
+
 subplot(3,2,3)
-plot(vtid,mqn(is:ie,9:12))
-vtid=(1990:2025)';
-vtid=vtid(1:end-1,1);
+plot(vtid,mqn(is:ie,9),'b','LineWidth',1.5); hold on;
+plot(vtid,mqn(is:ie,10),'k','LineWidth',1.5);
+plot(vtid,mqn(is:ie,11),'b--','LineWidth',2);
+plot(vtid,mqn(is:ie,12),'k--','LineWidth',2);
+axis tight;
+ylim([0, 1.00]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Rate');
+title({'(c): Logarithm of the one-month-ahead macroeconomic', 'uncertainty index suggested in Ludvigson et al. (2021).'});
+legend('TN','FP','FN','TP','Orientation','horizontal','Location','north');
+
+vtid_annual=(1990:2025)';
+vtid_annual=vtid_annual(1:end-1,1);
 subplot(3,2,5)
-plot(vtid,vmse)
+bar(vtid_annual,vmse,'FaceColor','b');
+ylim([0.90, 1.05]);
+xlim([1989.5, 2024.5]);
+xlabel('Time'); ylabel('Value');
+title({'(e): Logarithm of the one-month-ahead macroeconomic', 'uncertainty index suggested in Ludvigson et al. (2021).'});
 
 for k=13
    
@@ -204,17 +225,35 @@ vstart=find(ma(:,end)==1);
 vend=(find(ma(:,end)==-1)-1)+1;
 Recessions=[vtid(vstart,1),vtid(vend,1)];
 subplot(3,2,2)
-plot(vtid,mqn(is:ie,3))
-axis tight;
+plot(vtid,mqn(is:ie,3),'b','LineWidth',1.5)
+hold on;
 recession_bars;
-plot(vtid,mqn(is:ie,3))
-axis tight; 
+plot(vtid,mqn(is:ie,3),'b','LineWidth',1.5)
+axis tight;
+ylim([0, 0.30]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Value');
+title({'(b): Logarithm of the newspaper-based U.S. economic', 'policy uncertainty index suggested in Baker et al. (2016).'});
+
 subplot(3,2,4)
-plot(vtid,mqn(is:ie,9:12))
-vtid=(1990:2025)';
-vtid=vtid(1:end-1,1);
+plot(vtid,mqn(is:ie,9),'b','LineWidth',1.5); hold on;
+plot(vtid,mqn(is:ie,10),'k','LineWidth',1.5);
+plot(vtid,mqn(is:ie,11),'b--','LineWidth',2);
+plot(vtid,mqn(is:ie,12),'k--','LineWidth',2);
+axis tight;
+ylim([0, 1.00]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Rate');
+title({'(d): Logarithm of the newspaper-based U.S. economic', 'policy uncertainty index suggested in Baker et al. (2016).'});
+
+vtid_annual=(1990:2025)';
+vtid_annual=vtid_annual(1:end-1,1);
 subplot(3,2,6)
-plot(vtid,vmse)
+bar(vtid_annual,vmse,'FaceColor','b');
+ylim([0.90, 1.05]);
+xlim([1989.5, 2024.5]);
+xlabel('Time'); ylabel('Value');
+title({'(f): Logarithm of the newspaper-based U.S. economic', 'policy uncertainty index suggested in Baker et al. (2016).'});
 
 
  
