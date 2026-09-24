@@ -1,12 +1,10 @@
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 close all
 clc
 
-script_dir = fileparts(mfilename('fullpath'));
-if isempty(script_dir), script_dir = pwd; end
-addpath(fullfile(script_dir, '..', 'functions'));
-addpath(fullfile(script_dir, '..', 'data'));
-addpath(fullfile(script_dir, '..', 'results'));
 
 mc=xlsread('results.xls','figure6_supp');
 mc=mc(1:18, :);
@@ -49,8 +47,8 @@ xlim([0.95, 1.02]); ylim([0.04, 0.14]);
 xlabel('TU'); ylabel('CW p-value');
 title('(d): Hyperparameter values on the prior for \pi_{t+1} are \alpha=20 and \beta=0.10.');
 
-out_dir = fullfile(script_dir, '..', 'plots');
+out_dir = fullfile(repl_root, 'reports', 'plots');
 set(fig, 'PaperPositionMode', 'auto');
 saveas(fig, fullfile(out_dir, 'figure6_supp_reproduced.png'));
-saveas(fig, fullfile(out_dir, 'figure6_supp.fig'));
+saveas(fig, fullfile(out_dir, 'figure6_supp_reproduced.fig'));
 close(fig);
