@@ -1,13 +1,10 @@
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 close all
 clc
 
-if exist('functions', 'dir'), addpath('functions'); end
-if exist('data', 'dir'), addpath('data'); end
-if exist('results', 'dir'), addpath('results'); end
-if exist('../functions', 'dir'), addpath('../functions'); end
-if exist('../data', 'dir'), addpath('../data'); end
-if exist('../results', 'dir'), addpath('../results'); end
 
 mc=xlsread('results.xls','figure1_supp');
 
@@ -100,12 +97,8 @@ xlim([0, 420]); ylim([0, 1.0]);
 xlabel('Time'); ylabel('Rate');
 title('(f): Low-correlation scenario.');
 
-if exist('../plots', 'dir')
-    out_dir = '../plots';
-else
-    out_dir = 'plots';
-end
+out_dir = fullfile(repl_root, 'reports', 'plots');
 set(fig, 'PaperPositionMode', 'auto');
 saveas(fig, fullfile(out_dir, 'figure1_supp_reproduced.png'));
-saveas(fig, fullfile(out_dir, 'figure1_supp.fig'));
+saveas(fig, fullfile(out_dir, 'figure1_supp_reproduced.fig'));
 close(fig);
