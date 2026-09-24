@@ -1,0 +1,15 @@
+original_files/
+drafts/
+.DS_Store
+**/.DS_Store
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+data/raw/
+data/processed/
+data/pipeline/
+data/temp/
+src/temp/
+.herdr/
+*.mat

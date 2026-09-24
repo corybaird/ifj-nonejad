@@ -1,0 +1,8 @@
+# Ignore temporary and binary artifacts
+reports/figures/
+data/raw/
+data/processed/
+data/pipeline/
+data/temp/
+src/temp/
+.venv/
