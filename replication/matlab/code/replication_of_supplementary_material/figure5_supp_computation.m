@@ -1,12 +1,13 @@
 
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
 % mtstream=RandStream('mt19937ar');
 % RandStream.setDefaultStream(mtstream);
 
-addpath('functions')
-addpath('data')
 
 N=1; 
 LASTN=maxNumCompThreads(N);
@@ -14,7 +15,7 @@ LASTN=maxNumCompThreads(N);
 %mquant=zeros(19,4);
 kk=1;
 vbeg=199001;
-vend=202412;    %remember to change, 202412 for 1990-2024 out-of-sample period.
+vend=replication_setting('vend',202412);    %remember to change, 202412 for 1990-2024 out-of-sample period.
 % vend=201912;  %remember to change, 201912 for 1990-2019 out-of-sample period.
 for k=[1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19]
    

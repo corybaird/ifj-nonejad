@@ -1,20 +1,21 @@
 
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
 % mtstream=RandStream('mt19937ar');
 % RandStream.setDefaultStream(mtstream);
 
-addpath('functions')
-addpath('data')
 
 N=1; 
 LASTN=maxNumCompThreads(N);
 %mquant=zeros(19,4);
 kk=1;
 vbeg=199001;
-vend=202412;    %remember to change, 202412 for 1990-2024 out-of-sample period.
-da0=0.10; db0=0.10; %uncomment and run, panel (a).
+vend=replication_setting('vend',202412);    %remember to change, 202412 for 1990-2024 out-of-sample period.
+da0=replication_setting('da0',0.10); db0=replication_setting('db0',0.10); %uncomment and run, panel (a).
 % da0=2.00; db0=2.00; %uncomment and run, panel (b).
 % da0=20.00; db0=1.00;  %uncomment and run, panel (c).
 % da0=20.00; db0=0.10;  %uncomment and run, panel (c).
