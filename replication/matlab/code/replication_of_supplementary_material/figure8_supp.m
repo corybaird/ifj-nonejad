@@ -1,12 +1,13 @@
 
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
 % mtstream=RandStream('mt19937ar');
 % RandStream.setDefaultStream(mtstream);
 
-addpath('functions')
-addpath('data')
 
 N=1; 
 LASTN=maxNumCompThreads(N);
