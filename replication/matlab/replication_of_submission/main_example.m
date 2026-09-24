@@ -4,6 +4,8 @@ clc
 
 addpath('functions')
 addpath('data')
+addpath('../functions')
+addpath('../data')
 
 %mtstream=RandStream('mt19937ar');
 %RandStream.setDefaultStream(mtstream);
