@@ -1,0 +1,104 @@
+# Full replication run matrix derived from docs/readme.txt (upstream readme).
+# Each job runs one MATLAB script under REPL_<NAME> environment overrides
+# (read by code/functions/replication_setting.m) and, for computation jobs, compares
+# the captured matrix against a block of reports/results/results.xls.
+# Paths are relative to replication/matlab/ unless marked project-relative.
+
+matlab_bin: /Applications/MATLAB_R2025b.app/bin/matlab
+code_dir: code
+plots_dir: reports/plots
+results_file: reports/results/results.xls
+output_dir: reports/results/runs
+reference_figs: ../../original_files/ijfr/plots
+max_workers: 6
+tolerance_4dp: 0.0000501
+significance_levels: [0.01, 0.05, 0.10]
+
+# Statistic held in each results.xls column, used to flag conclusion flips.
+# tu and loss_ratio flip when crossing 1, pval when crossing a significance level, sharpe when changing sign.
+stat_columns:
+  figure1: [tu, pval, pval, tu, pval, pval]
+  figure4: [tu, pval, pval, tu, pval, pval]
+  figure5: [tu, pval, pval, tu, pval, pval]
+  figure7: [loss_ratio, sharpe, loss_ratio, sharpe]
+  table1_supp: [tu, pval, pval, tu, pval, pval]
+  figure2_supp: [tu, pval, pval, tu, pval, pval]
+  figure3_supp: [tu, pval, pval, tu, pval, pval]
+  figure4_supp: [tu, pval, pval, tu, pval, pval]
+  figure5_supp: [tu, pval, pval, tu, pval, pval]
+  figure6_supp: [tu, pval, tu, pval, tu, pval, tu, pval]
+  figure7_supp: [tu, tu, pval, pval, pval, pval]
+  figure9_supp: [tu, pval, pval]
+
+# Phase 1: scripts that write .mat files. Every job writes a distinct file name.
+producers:
+  - {name: main, dir: replication_of_submission, script: main}
+  - {name: main_sma_bma, dir: replication_of_supplementary_material, script: main_sma_bma}
+  - {name: main_reg, dir: replication_of_supplementary_material, script: main_reg}
+  - {name: main_brent, dir: replication_of_supplementary_material, script: main_brent}
+  - {name: main_rac, dir: replication_of_supplementary_material, script: main_rac}
+  - {name: main_exp, dir: replication_of_supplementary_material, script: main_exp}
+  - {name: main_real, dir: replication_of_supplementary_material, script: main_real, env: {REAL_K: "[1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19]"}}
+  - {name: main_prior_g0.05, dir: replication_of_supplementary_material, script: main_prior, env: {DG: "0.05", PRIOR_IDX: "1"}}
+  - {name: main_prior_g0.5, dir: replication_of_supplementary_material, script: main_prior, env: {DG: "0.5", PRIOR_IDX: "2"}}
+  - {name: main_prior_g5, dir: replication_of_supplementary_material, script: main_prior, env: {DG: "5", PRIOR_IDX: "3"}}
+  - {name: main_prior_g50, dir: replication_of_supplementary_material, script: main_prior, env: {DG: "50", PRIOR_IDX: "4"}}
+  - {name: main_prior_g100, dir: replication_of_supplementary_material, script: main_prior, env: {DG: "100", PRIOR_IDX: "5"}}
+  - {name: main_for_h2, dir: replication_of_supplementary_material, script: main_for, env: {IH: "2"}}
+  - {name: main_for_h3, dir: replication_of_supplementary_material, script: main_for, env: {IH: "3"}}
+  - {name: main_for_h4, dir: replication_of_supplementary_material, script: main_for, env: {IH: "4"}}
+  - {name: main_for_h9, dir: replication_of_supplementary_material, script: main_for, env: {IH: "9"}}
+  - {name: main_sim_lam1, dir: replication_of_supplementary_material, script: main_sim, env: {DLAM: "1", SIM_IDX: "1"}}
+  - {name: main_sim_lam1.5, dir: replication_of_supplementary_material, script: main_sim, env: {DLAM: "1.5", SIM_IDX: "2"}}
+  - {name: main_sim_lam0.5, dir: replication_of_supplementary_material, script: main_sim, env: {DLAM: "0.5", SIM_IDX: "3"}}
+
+# Phase 2: computations compared against results.xls.
+# src_cols / dst_cols / dst_rows are 1-based; dst_rows "all" means rows 1..n of the capture.
+computations:
+  - {name: figure1_2024, dir: replication_of_submission, script: figure1_computation, env: {VEND: "202412"}, sheet: figure1, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure1_2019, dir: replication_of_submission, script: figure1_computation, env: {VEND: "201912"}, sheet: figure1, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure4_ir0, dir: replication_of_submission, script: figure_4_computation, env: {IR: "0"}, sheet: figure4, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure4_ir1, dir: replication_of_submission, script: figure_4_computation, env: {IR: "1"}, sheet: figure4, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure5_ir0, dir: replication_of_submission, script: figure5_computation, env: {IR: "0"}, sheet: figure5, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure5_ir1, dir: replication_of_submission, script: figure5_computation, env: {IR: "1"}, sheet: figure5, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure7_2024, dir: replication_of_submission, script: figure7_computation, env: {VEND: "202412"}, sheet: figure7, src_cols: [4, 5], dst_cols: [1, 2]}
+  - {name: figure7_2019, dir: replication_of_submission, script: figure7_computation, env: {VEND: "201912"}, sheet: figure7, src_cols: [4, 5], dst_cols: [3, 4]}
+  - {name: table1_supp_2024, dir: replication_of_supplementary_material, script: table1_supp, env: {VEND: "202412"}, sheet: table1_supp, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: table1_supp_2019, dir: replication_of_supplementary_material, script: table1_supp, env: {VEND: "201912"}, sheet: table1_supp, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure1_supp_lam1, dir: replication_of_supplementary_material, script: figure1_supp_computation, env: {SIM_IDX: "1"}, capture: "[mqn(is:ie,3),mqn(is:ie,7),mqn(is:ie,9:12),vcor]", sheet: figure1_supp, src_cols: [1, 2, 3, 4, 5, 6, 7], dst_cols: [1, 2, 3, 4, 5, 6, 7]}
+  - {name: figure1_supp_lam1.5, dir: replication_of_supplementary_material, script: figure1_supp_computation, env: {SIM_IDX: "2"}, capture: "[mqn(is:ie,3),mqn(is:ie,7),mqn(is:ie,9:12),vcor]", sheet: figure1_supp, src_cols: [1, 2, 3, 4, 5, 6, 7], dst_cols: [8, 9, 10, 11, 12, 13, 14]}
+  - {name: figure1_supp_lam0.5, dir: replication_of_supplementary_material, script: figure1_supp_computation, env: {SIM_IDX: "3"}, capture: "[mqn(is:ie,3),mqn(is:ie,7),mqn(is:ie,9:12),vcor]", sheet: figure1_supp, src_cols: [1, 2, 3, 4, 5, 6, 7], dst_cols: [15, 16, 17, 18, 19, 20, 21]}
+  - {name: figure2_supp_2024, dir: replication_of_supplementary_material, script: figure2_supp_computation, env: {VEND: "202412"}, sheet: figure2_supp, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure2_supp_2019, dir: replication_of_supplementary_material, script: figure2_supp_computation, env: {VEND: "201912"}, sheet: figure2_supp, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure3_supp_2024, dir: replication_of_supplementary_material, script: figure3_supp_computation, env: {VEND: "202412"}, sheet: figure3_supp, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure3_supp_2019, dir: replication_of_supplementary_material, script: figure3_supp_computation, env: {VEND: "201912"}, sheet: figure3_supp, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure4_supp_2024, dir: replication_of_supplementary_material, script: figure4_supp_computation, env: {VEND: "202412"}, sheet: figure4_supp, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure4_supp_2019, dir: replication_of_supplementary_material, script: figure4_supp_computation, env: {VEND: "201912"}, sheet: figure4_supp, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure5_supp_2024, dir: replication_of_supplementary_material, script: figure5_supp_computation, env: {VEND: "202412"}, sheet: figure5_supp, src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure5_supp_2019, dir: replication_of_supplementary_material, script: figure5_supp_computation, env: {VEND: "201912"}, sheet: figure5_supp, src_cols: [1, 2, 3], dst_cols: [4, 5, 6]}
+  - {name: figure6_supp_a, dir: replication_of_supplementary_material, script: figure6_supp_computation, env: {DA0: "0.10", DB0: "0.10"}, sheet: figure6_supp, src_cols: [1, 2], dst_cols: [1, 2]}
+  - {name: figure6_supp_b, dir: replication_of_supplementary_material, script: figure6_supp_computation, env: {DA0: "2.00", DB0: "2.00"}, sheet: figure6_supp, src_cols: [1, 2], dst_cols: [3, 4]}
+  - {name: figure6_supp_c, dir: replication_of_supplementary_material, script: figure6_supp_computation, env: {DA0: "20.00", DB0: "1.00"}, sheet: figure6_supp, src_cols: [1, 2], dst_cols: [5, 6]}
+  - {name: figure6_supp_d, dir: replication_of_supplementary_material, script: figure6_supp_computation, env: {DA0: "20.00", DB0: "0.10"}, sheet: figure6_supp, src_cols: [1, 2], dst_cols: [7, 8]}
+  - {name: figure7_supp_g0.05_2024, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "1", VEND: "202412"}, sheet: figure7_supp, dst_rows: [1], src_cols: [1, 2, 3], dst_cols: [1, 3, 5]}
+  - {name: figure7_supp_g0.05_2019, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "1", VEND: "201912"}, sheet: figure7_supp, dst_rows: [1], src_cols: [1, 2, 3], dst_cols: [2, 4, 6]}
+  - {name: figure7_supp_g0.5_2024, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "2", VEND: "202412"}, sheet: figure7_supp, dst_rows: [2], src_cols: [1, 2, 3], dst_cols: [1, 3, 5]}
+  - {name: figure7_supp_g0.5_2019, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "2", VEND: "201912"}, sheet: figure7_supp, dst_rows: [2], src_cols: [1, 2, 3], dst_cols: [2, 4, 6]}
+  - {name: figure7_supp_g5_2024, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "3", VEND: "202412"}, sheet: figure7_supp, dst_rows: [3], src_cols: [1, 2, 3], dst_cols: [1, 3, 5]}
+  - {name: figure7_supp_g5_2019, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "3", VEND: "201912"}, sheet: figure7_supp, dst_rows: [3], src_cols: [1, 2, 3], dst_cols: [2, 4, 6]}
+  - {name: figure7_supp_g50_2024, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "4", VEND: "202412"}, sheet: figure7_supp, dst_rows: [4], src_cols: [1, 2, 3], dst_cols: [1, 3, 5]}
+  - {name: figure7_supp_g50_2019, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "4", VEND: "201912"}, sheet: figure7_supp, dst_rows: [4], src_cols: [1, 2, 3], dst_cols: [2, 4, 6]}
+  - {name: figure7_supp_g100_2024, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "5", VEND: "202412"}, sheet: figure7_supp, dst_rows: [5], src_cols: [1, 2, 3], dst_cols: [1, 3, 5]}
+  - {name: figure7_supp_g100_2019, dir: replication_of_supplementary_material, script: figure7_supp_computation, env: {PRIOR_IDX: "5", VEND: "201912"}, sheet: figure7_supp, dst_rows: [5], src_cols: [1, 2, 3], dst_cols: [2, 4, 6]}
+  - {name: figure9_supp_h2, dir: replication_of_supplementary_material, script: figure9_supp_computation, env: {IH: "2"}, sheet: figure9_supp, dst_rows: [1], src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure9_supp_h3, dir: replication_of_supplementary_material, script: figure9_supp_computation, env: {IH: "3"}, sheet: figure9_supp, dst_rows: [2], src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure9_supp_h4, dir: replication_of_supplementary_material, script: figure9_supp_computation, env: {IH: "4"}, sheet: figure9_supp, dst_rows: [3], src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+  - {name: figure9_supp_h9, dir: replication_of_supplementary_material, script: figure9_supp_computation, env: {IH: "9"}, sheet: figure9_supp, dst_rows: [4], src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
+
+# Phase 3: scripts whose figure is recomputed from .mat files and has no results.xls sheet.
+figures:
+  - {name: figure8_supp, dir: replication_of_supplementary_material, script: figure8_supp, output: figure8_supp_reproduced.png}
+  - {name: figure2, dir: replication_of_submission, script: figure2, output: figure2_reproduced.png}
+  - {name: figure3, dir: replication_of_submission, script: figure3, output: figure3_reproduced.png}
+  - {name: figure6, dir: replication_of_submission, script: figure6, output: figure6_reproduced.png}
+  - {name: figure9_supp, dir: replication_of_supplementary_material, script: figure9_supp, output: figure9_supp_reproduced.png}

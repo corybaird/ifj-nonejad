@@ -26,11 +26,15 @@
 | `replication/` | [`replication_log.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/replication_log.md) | Exhaustive artifact ledger tracking all 7 manuscript figures and 9 supplementary figures |
 | `replication/` | [`reexecution_guide.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/reexecution_guide.md) | Step-by-step pipeline re-execution runbook and environment settings |
 | `replication/` | [`figures.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/figures.md) | Visual comparison audit of reproduced figures against `.fig` reference plots |
+| `replication/` | [`discrepancies.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/discrepancies.md) | Open and resolved discrepancies against `results.xls`, severity, and impact on findings |
+| `docs/` | [`readme.txt`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/readme.txt) | Upstream author readme with step-by-step replication instructions |
+| `docs/` | [`handoff.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/handoff.md) | Handoff for a reviewing agent: layout, audit status, verification protocol |
 
 ---
 
 ## 1.3 Recommended Reading Sequences
 * For Executive Findings: Start with [`final_overview.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/final_overview.md)
 * For Pipeline Execution: Follow [`reexecution_guide.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/reexecution_guide.md)
+* For Replication Status: Start with [`discrepancies.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/discrepancies.md)
 * For Figure & Table Audits: Inspect [`replication_log.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/replication_log.md) and [`figures.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/replication/figures.md)
 * For Model & Data Definitions: Consult [`architecture.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/architecture/architecture.md) and [`data.md`](file:///Users/cory/Desktop/ifj-editor/nonejad-2026/replication/matlab/docs/architecture/data.md)
