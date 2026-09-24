@@ -21,8 +21,8 @@
 ## 1.2 Topline Reproducibility Findings
 * Core claim evaluated: Combining Bayesian beta-binomial learning with dynamic forecast rotation outperforms the Ellwanger and Snudden (2023) random-walk benchmark
 * Verification tiers:
-  * Tier 0 (Published benchmark comparison): Figures 1 to 7 and supplementary figures match `results/results.xls` numerical baselines
-  * Tier 1 (Example re-execution): `main_example.m` and `figure1_computation_example.m` execute cleanly, reproducing row 4 of `results.xls`
+  * Tier 0 (Published benchmark comparison): Every `results.xls` sheet regenerated in `reports/results/runs/replication_run_20260924_151805/`; main text close with no conclusion flips; Figure 4_supp does not replicate (see `replication/discrepancies.md`)
+  * Tier 1 (Example re-execution): `main_example.m` and `figure1_computation_example.m` execute cleanly, reproducing row 4 of `results.xls` to within 2e-4 (DM p-value 0.0649 vs 0.0651)
   * Tier 2 (Full re-estimation from raw data): 18 monitoring variables across 1986m1 to 2024m12
 * Upstream integrity: Excel reference files and `.fig` figures provide complete ground truth
 
