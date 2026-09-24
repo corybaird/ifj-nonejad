@@ -1,9 +1,11 @@
 
 clear all
-clc
+close all
 
-addpath('functions')
-addpath('data')
+if exist('functions', 'dir'), addpath('functions'); end
+if exist('data', 'dir'), addpath('data'); end
+if exist('../functions', 'dir'), addpath('../functions'); end
+if exist('../data', 'dir'), addpath('../data'); end
 
 N=1; 
 LASTN=maxNumCompThreads(N);
@@ -111,12 +113,16 @@ vstart=vstart(1:end-1,1);
 vend=(find(ma(:,end)==-1)-1)+1;
 Recessions=[vtid(vstart,1),vtid(vend,1)];
 subplot(2,2,1)
-plot(vtid,mz(size(mz)-size(vd):end-1,1))
-axis tight;
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,1),'b','LineWidth',1.5)
+hold on;
 recession_bars;
-plot(vtid,mz(size(mz)-size(vd):end-1,1))
-axis tight; 
-corr(mz(size(mz)-size(vd):end-1,1),(vc==1 & vd==1)*1)
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,1),'b','LineWidth',1.5)
+axis tight;
+ylim([-0.70, 0.30]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Value');
+title({'(a): Logarithm of the one-month-ahead macroeconomic', 'uncertainty index suggested in Ludvigson et al. (2021).'}); 
+corr(mz(size(mz,1)-size(vd,1):end-1,1),(vc==1 & vd==1)*1)
  
 for k=13
    
@@ -221,11 +227,15 @@ vstart=find(ma(:,end)==1);
 vend=(find(ma(:,end)==-1)-1)+1;
 Recessions=[vtid(vstart,1),vtid(vend,1)];
 subplot(2,2,2)
-plot(vtid,mz(size(mz)-size(vd):end-1,13))
-axis tight;
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,13),'b','LineWidth',1.5)
+hold on;
 recession_bars;
-plot(vtid,mz(size(mz)-size(vd):end-1,13))
-axis tight; 
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,13),'b','LineWidth',1.5)
+axis tight;
+ylim([4.00, 6.00]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Value');
+title({'(b): Logarithm of the newspaper-based U.S. economic', 'policy uncertainty index suggested in Baker et al. (2016).'}); 
 
 for k=14
    
@@ -331,11 +341,15 @@ vend=(find(ma(:,end)==-1)-1)+1;
 vend=vend(2:end,1);
 Recessions=[vtid(vstart,1),vtid(vend,1)];
 subplot(2,2,3)
-plot(vtid,mz(size(mz)-size(vd):end-1,14))
-axis tight;
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,14),'b','LineWidth',1.5)
+hold on;
 recession_bars;
-plot(vtid,mz(size(mz)-size(vd):end-1,14))
-axis tight; 
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,14),'b','LineWidth',1.5)
+axis tight;
+ylim([3.50, 6.50]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Value');
+title({'(c): Logarithm of the newspaper-based geopolitical risk index', 'suggested in Caldara and Iacoviello (2022).'}); 
  
 for k=19
    
@@ -441,8 +455,12 @@ vend=(find(ma(:,end)==-1)-1)+1;
 % vend=vend(2:end,1);
 Recessions=[vtid(vstart,1),vtid(vend,1)];
 subplot(2,2,4)
-plot(vtid,mz(size(mz)-size(vd):end-1,19)*100)
-axis tight;
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,19)*100,'b','LineWidth',1.5)
+hold on;
 recession_bars;
-plot(vtid,mz(size(mz)-size(vd):end-1,19)*100)
-axis tight; 
+plot(vtid,mz(size(mz,1)-size(vd,1):end-1,19)*100,'b','LineWidth',1.5)
+axis tight;
+ylim([-2.00, 4.00]);
+xlim([1990, 2025]);
+xlabel('Time'); ylabel('Value');
+title({'(d): The ten-year U.S. treasury constant maturity rate', 'minus the three-month U.S. treasury constant maturity rate.'}); 
