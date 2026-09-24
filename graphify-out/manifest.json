@@ -1,0 +1,428 @@
+{
+  "original_files/ijfr/functions/NeweyWest.m": {
+    "mtime": 1790212015.715557,
+    "seen": 1790213785.485748,
+    "ast_hash": "b4f812244065901119fac19c99686acc",
+    "semantic_hash": "b4f812244065901119fac19c99686acc"
+  },
+  "original_files/ijfr/functions/funcCW.m": {
+    "mtime": 1790212015.715657,
+    "seen": 1790213785.48575,
+    "ast_hash": "6cf89049f9a0d3c2ed6e569953763055",
+    "semantic_hash": "6cf89049f9a0d3c2ed6e569953763055"
+  },
+  "original_files/ijfr/functions/funcChitest.m": {
+    "mtime": 1790212015.7157512,
+    "seen": 1790213785.4857512,
+    "ast_hash": "cdc21535eb6df5cc1aecc61785414226",
+    "semantic_hash": "cdc21535eb6df5cc1aecc61785414226"
+  },
+  "original_files/ijfr/functions/funcCrr.m": {
+    "mtime": 1790212015.7158394,
+    "seen": 1790213785.485752,
+    "ast_hash": "ce902ee876408a06638fd99ac3e4ddb7",
+    "semantic_hash": "ce902ee876408a06638fd99ac3e4ddb7"
+  },
+  "original_files/ijfr/functions/funcDLM.m": {
+    "mtime": 1790212015.715946,
+    "seen": 1790213785.485752,
+    "ast_hash": "87314852956ab362e6cd14576da3e000",
+    "semantic_hash": "87314852956ab362e6cd14576da3e000"
+  },
+  "original_files/ijfr/functions/funcDM.m": {
+    "mtime": 1790212015.7160392,
+    "seen": 1790213785.485753,
+    "ast_hash": "6818215e3431480a284de4756268adcb",
+    "semantic_hash": "6818215e3431480a284de4756268adcb"
+  },
+  "original_files/ijfr/functions/funcDR.m": {
+    "mtime": 1790212015.7161407,
+    "seen": 1790213785.485753,
+    "ast_hash": "9801b4381f8a6efbea564e46bf7d847a",
+    "semantic_hash": "9801b4381f8a6efbea564e46bf7d847a"
+  },
+  "original_files/ijfr/functions/funcDynamicRotation.m": {
+    "mtime": 1790212015.7162495,
+    "seen": 1790213785.485754,
+    "ast_hash": "b03026498b04d881473273b20d2cf18e",
+    "semantic_hash": "b03026498b04d881473273b20d2cf18e"
+  },
+  "original_files/ijfr/functions/funcEstimateRLS.m": {
+    "mtime": 1790212015.71636,
+    "seen": 1790213785.485754,
+    "ast_hash": "74f43e959b493a0b93bcfa9f2eb9cba7",
+    "semantic_hash": "74f43e959b493a0b93bcfa9f2eb9cba7"
+  },
+  "original_files/ijfr/functions/funcLag.m": {
+    "mtime": 1790212015.716457,
+    "seen": 1790213785.485755,
+    "ast_hash": "77329fb6d3ed9b2db09d7bc65f9ced24",
+    "semantic_hash": "77329fb6d3ed9b2db09d7bc65f9ced24"
+  },
+  "original_files/ijfr/functions/funcLearning.m": {
+    "mtime": 1790212015.7166002,
+    "seen": 1790213785.485755,
+    "ast_hash": "0ae4ea42d849fd6340dbdeca096b0df8",
+    "semantic_hash": "0ae4ea42d849fd6340dbdeca096b0df8"
+  },
+  "original_files/ijfr/functions/funcLearningp.m": {
+    "mtime": 1790212015.7167366,
+    "seen": 1790213785.485756,
+    "ast_hash": "6e84a30d33fa2078f9a64d2de36ba49b",
+    "semantic_hash": "6e84a30d33fa2078f9a64d2de36ba49b"
+  },
+  "original_files/ijfr/functions/funcLearningx.m": {
+    "mtime": 1790212015.7168732,
+    "seen": 1790213785.485756,
+    "ast_hash": "3b25a8411f0d70b3f45d88d21fe9d3e6",
+    "semantic_hash": "3b25a8411f0d70b3f45d88d21fe9d3e6"
+  },
+  "original_files/ijfr/functions/funcLoss.m": {
+    "mtime": 1790212015.7169714,
+    "seen": 1790213785.485756,
+    "ast_hash": "36ff7768f6b67c59b434d81334b1dec4",
+    "semantic_hash": "36ff7768f6b67c59b434d81334b1dec4"
+  },
+  "original_files/ijfr/functions/funcMax.m": {
+    "mtime": 1790212015.71707,
+    "seen": 1790213785.4857569,
+    "ast_hash": "8417991ab893f598b9d3bad3ebd3ee24",
+    "semantic_hash": "8417991ab893f598b9d3bad3ebd3ee24"
+  },
+  "original_files/ijfr/functions/funcMeanc.m": {
+    "mtime": 1790212015.7171645,
+    "seen": 1790213785.4857569,
+    "ast_hash": "6fad7e05557728febd930751c62f6e88",
+    "semantic_hash": "6fad7e05557728febd930751c62f6e88"
+  },
+  "original_files/ijfr/functions/funcMin.m": {
+    "mtime": 1790212015.7172706,
+    "seen": 1790213785.485758,
+    "ast_hash": "a2070cc3fe8ff63733c64e83c96ba386",
+    "semantic_hash": "a2070cc3fe8ff63733c64e83c96ba386"
+  },
+  "original_files/ijfr/functions/funcPC.m": {
+    "mtime": 1790212015.7173688,
+    "seen": 1790213785.485758,
+    "ast_hash": "d002e5f8420ce672c6824848036e29a4",
+    "semantic_hash": "d002e5f8420ce672c6824848036e29a4"
+  },
+  "original_files/ijfr/functions/funcPercentile.m": {
+    "mtime": 1790212015.7174616,
+    "seen": 1790213785.485759,
+    "ast_hash": "06196946c2d91586798cbe8b450689ab",
+    "semantic_hash": "06196946c2d91586798cbe8b450689ab"
+  },
+  "original_files/ijfr/functions/funcRegress.m": {
+    "mtime": 1790212015.7175639,
+    "seen": 1790213785.485759,
+    "ast_hash": "6b2b234be632ba72bb17eb4d73abeea8",
+    "semantic_hash": "6b2b234be632ba72bb17eb4d73abeea8"
+  },
+  "original_files/ijfr/functions/funcRidge.m": {
+    "mtime": 1790212015.7176523,
+    "seen": 1790213785.485759,
+    "ast_hash": "036af743cda5e0bf484655a837159185",
+    "semantic_hash": "036af743cda5e0bf484655a837159185"
+  },
+  "original_files/ijfr/functions/funcStd.m": {
+    "mtime": 1790212015.7177613,
+    "seen": 1790213785.48576,
+    "ast_hash": "97308afe49cfde78116c33f5c0f775f7",
+    "semantic_hash": "97308afe49cfde78116c33f5c0f775f7"
+  },
+  "original_files/ijfr/functions/nw.m": {
+    "mtime": 1790212015.7178524,
+    "seen": 1790213785.48576,
+    "ast_hash": "6aeeab5c5595636e97ba3f64c4df1123",
+    "semantic_hash": "6aeeab5c5595636e97ba3f64c4df1123"
+  },
+  "original_files/ijfr/functions/nwest.m": {
+    "mtime": 1790212015.7179546,
+    "seen": 1790213785.485761,
+    "ast_hash": "a0a24d202e4301f0d0e84f909997d883",
+    "semantic_hash": "a0a24d202e4301f0d0e84f909997d883"
+  },
+  "original_files/ijfr/functions/nwesterr.m": {
+    "mtime": 1790212015.7180762,
+    "seen": 1790213785.485761,
+    "ast_hash": "dc1bedf3fd7173f3e1b8c3dc254d4ae9",
+    "semantic_hash": "dc1bedf3fd7173f3e1b8c3dc254d4ae9"
+  },
+  "original_files/ijfr/functions/recession_bars.m": {
+    "mtime": 1790212015.7181735,
+    "seen": 1790213785.4857621,
+    "ast_hash": "fbda1ae25e12d63226b4d44d7bc9ddc8",
+    "semantic_hash": "fbda1ae25e12d63226b4d44d7bc9ddc8"
+  },
+  "original_files/ijfr/functions/recession_dates.m": {
+    "mtime": 1790212015.718265,
+    "seen": 1790213785.4857621,
+    "ast_hash": "2908735dc2aabbb27fb7dfdc18321620",
+    "semantic_hash": "2908735dc2aabbb27fb7dfdc18321620"
+  },
+  "original_files/ijfr/replication_of_submission/figure1.m": {
+    "mtime": 1790212015.7227979,
+    "seen": 1790213785.4857621,
+    "ast_hash": "e298c1d64cb3776211d85c2a891124a4",
+    "semantic_hash": "e298c1d64cb3776211d85c2a891124a4"
+  },
+  "original_files/ijfr/replication_of_submission/figure1_computation.m": {
+    "mtime": 1790212015.722925,
+    "seen": 1790213785.485763,
+    "ast_hash": "61e875d14445b3ae96e361cef466c258",
+    "semantic_hash": "61e875d14445b3ae96e361cef466c258"
+  },
+  "original_files/ijfr/replication_of_submission/figure1_computation_example.m": {
+    "mtime": 1790212015.7230413,
+    "seen": 1790213785.485763,
+    "ast_hash": "6c87d93d4cb28a4bdbf7001d889be71a",
+    "semantic_hash": "6c87d93d4cb28a4bdbf7001d889be71a"
+  },
+  "original_files/ijfr/replication_of_submission/figure2.m": {
+    "mtime": 1790212015.723169,
+    "seen": 1790213785.485764,
+    "ast_hash": "5d3a30ba1029182d584c35e5271beb05",
+    "semantic_hash": "5d3a30ba1029182d584c35e5271beb05"
+  },
+  "original_files/ijfr/replication_of_submission/figure3.m": {
+    "mtime": 1790212015.7233822,
+    "seen": 1790213785.485764,
+    "ast_hash": "b0d4bac3b9e15841d35bbc0408a5ea0d",
+    "semantic_hash": "b0d4bac3b9e15841d35bbc0408a5ea0d"
+  },
+  "original_files/ijfr/replication_of_submission/figure4.m": {
+    "mtime": 1790212015.723477,
+    "seen": 1790213785.4857652,
+    "ast_hash": "dfd76fc827bed6bca80bc9a3b593d597",
+    "semantic_hash": "dfd76fc827bed6bca80bc9a3b593d597"
+  },
+  "original_files/ijfr/replication_of_submission/figure5.m": {
+    "mtime": 1790212015.72355,
+    "seen": 1790213785.4857652,
+    "ast_hash": "39a3b25da628664530e7fff7a2c63843",
+    "semantic_hash": "39a3b25da628664530e7fff7a2c63843"
+  },
+  "original_files/ijfr/replication_of_submission/figure5_computation.m": {
+    "mtime": 1790212015.7236605,
+    "seen": 1790213785.4857652,
+    "ast_hash": "356fb9ada1d2b1ec04b848c438e5bab8",
+    "semantic_hash": "356fb9ada1d2b1ec04b848c438e5bab8"
+  },
+  "original_files/ijfr/replication_of_submission/figure6.m": {
+    "mtime": 1790212015.7238672,
+    "seen": 1790213785.485766,
+    "ast_hash": "d5cba86c772e97f49673c0f4f911536e",
+    "semantic_hash": "d5cba86c772e97f49673c0f4f911536e"
+  },
+  "original_files/ijfr/replication_of_submission/figure7.m": {
+    "mtime": 1790212015.7239473,
+    "seen": 1790213785.485766,
+    "ast_hash": "2da6c34f39248a98f5ecbca9ffbc5643",
+    "semantic_hash": "2da6c34f39248a98f5ecbca9ffbc5643"
+  },
+  "original_files/ijfr/replication_of_submission/figure7_computation.m": {
+    "mtime": 1790212015.724065,
+    "seen": 1790213785.485767,
+    "ast_hash": "2b4f090e97bca29492bb9dd3e480f697",
+    "semantic_hash": "2b4f090e97bca29492bb9dd3e480f697"
+  },
+  "original_files/ijfr/replication_of_submission/figure_4_computation.m": {
+    "mtime": 1790212015.7241542,
+    "seen": 1790213785.485767,
+    "ast_hash": "0aa728b4d219c12ec873dddfcb7c1cb6",
+    "semantic_hash": "0aa728b4d219c12ec873dddfcb7c1cb6"
+  },
+  "original_files/ijfr/replication_of_submission/main.m": {
+    "mtime": 1790212015.7242625,
+    "seen": 1790213785.485767,
+    "ast_hash": "8ba8038cc83f8082d252e4274c5f031c",
+    "semantic_hash": "8ba8038cc83f8082d252e4274c5f031c"
+  },
+  "original_files/ijfr/replication_of_submission/main_example.m": {
+    "mtime": 1790212015.724382,
+    "seen": 1790213785.4857678,
+    "ast_hash": "1cf63f2ff038d883f8d53c295368d9a2",
+    "semantic_hash": "1cf63f2ff038d883f8d53c295368d9a2"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure1_supp.m": {
+    "mtime": 1790212015.7356563,
+    "seen": 1790213785.4857678,
+    "ast_hash": "3957510bfdf62c71cc7ea9c21fc40856",
+    "semantic_hash": "3957510bfdf62c71cc7ea9c21fc40856"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure1_supp_computation.m": {
+    "mtime": 1790212015.735753,
+    "seen": 1790213785.485769,
+    "ast_hash": "adec64d628dafa6991e2b7f570035aa9",
+    "semantic_hash": "adec64d628dafa6991e2b7f570035aa9"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure2_supp.m": {
+    "mtime": 1790212015.7358418,
+    "seen": 1790213785.485769,
+    "ast_hash": "4f92f92e2c0a20454ddc1a49081f3216",
+    "semantic_hash": "4f92f92e2c0a20454ddc1a49081f3216"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure2_supp_computation.m": {
+    "mtime": 1790212015.7359235,
+    "seen": 1790213785.48577,
+    "ast_hash": "1606e611dce886ec65b12bb02b479631",
+    "semantic_hash": "1606e611dce886ec65b12bb02b479631"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure3_supp.m": {
+    "mtime": 1790212015.736003,
+    "seen": 1790213785.48577,
+    "ast_hash": "7e18e3c21b70f01e5a81f67b1d1673ff",
+    "semantic_hash": "7e18e3c21b70f01e5a81f67b1d1673ff"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure3_supp_computation.m": {
+    "mtime": 1790212015.7360876,
+    "seen": 1790213785.485771,
+    "ast_hash": "888a08b87ba08db585378e78517f2e8f",
+    "semantic_hash": "888a08b87ba08db585378e78517f2e8f"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure4_supp.m": {
+    "mtime": 1790212015.7361636,
+    "seen": 1790213785.485771,
+    "ast_hash": "e25840a9f4c23ad4ee3ab5dc78492a2a",
+    "semantic_hash": "e25840a9f4c23ad4ee3ab5dc78492a2a"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure4_supp_computation.m": {
+    "mtime": 1790212015.73627,
+    "seen": 1790213785.485771,
+    "ast_hash": "cc2f868ceefd11da23e338edd595ea82",
+    "semantic_hash": "cc2f868ceefd11da23e338edd595ea82"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure5_supp.m": {
+    "mtime": 1790212015.7363443,
+    "seen": 1790213785.4857721,
+    "ast_hash": "67c51b952147f93d69f40d1849af3a96",
+    "semantic_hash": "67c51b952147f93d69f40d1849af3a96"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure5_supp_computation.m": {
+    "mtime": 1790212015.736452,
+    "seen": 1790213785.4857721,
+    "ast_hash": "95a8abfc117399b8c1522458d53d4e8c",
+    "semantic_hash": "95a8abfc117399b8c1522458d53d4e8c"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure6_supp.m": {
+    "mtime": 1790212015.7365308,
+    "seen": 1790213785.485773,
+    "ast_hash": "ddd7f31dea86600b7c84c8bdf5a3092b",
+    "semantic_hash": "ddd7f31dea86600b7c84c8bdf5a3092b"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure6_supp_computation.m": {
+    "mtime": 1790212015.7366354,
+    "seen": 1790213785.485773,
+    "ast_hash": "e4eb3dedf36f144c3728ea0507257d7c",
+    "semantic_hash": "e4eb3dedf36f144c3728ea0507257d7c"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure7_supp.m": {
+    "mtime": 1790212015.7367089,
+    "seen": 1790213785.485773,
+    "ast_hash": "04001a053bd2247855029e7ec9f4a16a",
+    "semantic_hash": "04001a053bd2247855029e7ec9f4a16a"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure7_supp_computation.m": {
+    "mtime": 1790212015.7367783,
+    "seen": 1790213785.485774,
+    "ast_hash": "58d3d54e127a431c77a8366777cbb617",
+    "semantic_hash": "58d3d54e127a431c77a8366777cbb617"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure8_supp.m": {
+    "mtime": 1790212015.736884,
+    "seen": 1790213785.485774,
+    "ast_hash": "c4e7702ee8edf5d0832e97d88d7545c9",
+    "semantic_hash": "c4e7702ee8edf5d0832e97d88d7545c9"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure9_supp.m": {
+    "mtime": 1790212015.739689,
+    "seen": 1790213785.485775,
+    "ast_hash": "f03aa31da893a32b4ed3bc501488d00f",
+    "semantic_hash": "f03aa31da893a32b4ed3bc501488d00f"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/figure9_supp_computation.m": {
+    "mtime": 1790212015.7410715,
+    "seen": 1790213785.485775,
+    "ast_hash": "2d8619bcbd949f3d80a09c9cce64104e",
+    "semantic_hash": "2d8619bcbd949f3d80a09c9cce64104e"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main.m": {
+    "mtime": 1790212015.7413187,
+    "seen": 1790213785.485776,
+    "ast_hash": "8ba8038cc83f8082d252e4274c5f031c",
+    "semantic_hash": "8ba8038cc83f8082d252e4274c5f031c"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_brent.m": {
+    "mtime": 1790212015.7413952,
+    "seen": 1790213785.485776,
+    "ast_hash": "3b4a4d3777fefbaf1c941526b357377e",
+    "semantic_hash": "3b4a4d3777fefbaf1c941526b357377e"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_exp.m": {
+    "mtime": 1790212015.7416117,
+    "seen": 1790213785.485776,
+    "ast_hash": "5a835ebad3e011e198c711aed0382441",
+    "semantic_hash": "5a835ebad3e011e198c711aed0382441"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_for.m": {
+    "mtime": 1790212015.741822,
+    "seen": 1790213785.485777,
+    "ast_hash": "9a2cd9d3c5d53e47452cc1bbbe742755",
+    "semantic_hash": "9a2cd9d3c5d53e47452cc1bbbe742755"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_prior.m": {
+    "mtime": 1790212015.7418897,
+    "seen": 1790213785.485777,
+    "ast_hash": "e40760554a9881c6708c95fb0179b209",
+    "semantic_hash": "e40760554a9881c6708c95fb0179b209"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_rac.m": {
+    "mtime": 1790212015.7419555,
+    "seen": 1790213785.485777,
+    "ast_hash": "f6046c3d61cc4d24043182f5b58c0bfa",
+    "semantic_hash": "f6046c3d61cc4d24043182f5b58c0bfa"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_real.m": {
+    "mtime": 1790212015.7420282,
+    "seen": 1790213785.4857779,
+    "ast_hash": "2d44f30adb4f258682b83dfae5dab338",
+    "semantic_hash": "2d44f30adb4f258682b83dfae5dab338"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_reg.m": {
+    "mtime": 1790212015.742108,
+    "seen": 1790213785.4857779,
+    "ast_hash": "73bbaa0c7a880e0fa512c15ef93f432c",
+    "semantic_hash": "73bbaa0c7a880e0fa512c15ef93f432c"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_sim.m": {
+    "mtime": 1790212015.7421727,
+    "seen": 1790213785.485779,
+    "ast_hash": "3795a317cee1130321a2a34bcbe35b01",
+    "semantic_hash": "3795a317cee1130321a2a34bcbe35b01"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/main_sma_bma.m": {
+    "mtime": 1790212015.7422364,
+    "seen": 1790213785.485779,
+    "ast_hash": "6552c5775116c59713a29035dc3ec23f",
+    "semantic_hash": "6552c5775116c59713a29035dc3ec23f"
+  },
+  "original_files/ijfr/replication_of_supplementary_material/table1_supp.m": {
+    "mtime": 1790212015.7425036,
+    "seen": 1790213785.48578,
+    "ast_hash": "17d0e4cf2bf5e8cee12fdc81148fba7c",
+    "semantic_hash": "17d0e4cf2bf5e8cee12fdc81148fba7c"
+  },
+  "original_files/ijfr/README.md": {
+    "mtime": 1790212015.7073169,
+    "seen": 1790213785.48578,
+    "ast_hash": "4742d9359f6b3b5c142af7ebc6aeea1b",
+    "semantic_hash": "4742d9359f6b3b5c142af7ebc6aeea1b"
+  },
+  "original_files/ijfr/readme/readme.txt": {
+    "mtime": 1790212015.722573,
+    "seen": 1790213785.48578,
+    "ast_hash": "b7a5240dbf3ec7daec6ae6ac2e55ace6",
+    "semantic_hash": "b7a5240dbf3ec7daec6ae6ac2e55ace6"
+  }
+}

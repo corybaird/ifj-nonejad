@@ -1,0 +1,179 @@
+{
+  "communities": {
+    "0": [
+      "drafts_ijf_d_26_00175_r3_bayesian_beta_binomial_model",
+      "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "drafts_ijf_d_26_00175_r3_dynamic_linear_model",
+      "drafts_ijf_d_26_00175_r3_ellwanger_snudden_2023",
+      "drafts_ijf_d_26_00175_r3_mccracken_ng_database",
+      "drafts_ijf_d_26_00175_r3_random_walk_benchmark",
+      "drafts_ijf_d_26_00175_r3_spike_and_slab_prior",
+      "drafts_ijf_d_26_00175_r3_wti_crude_oil_price"
+    ],
+    "1": [
+      "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "drafts_ijf_d_26_00175_r3_farmer_et_al_2023",
+      "drafts_ijf_d_26_00175_r3_mankiw_reis_2002",
+      "drafts_ijf_d_26_00175_r3_net_change_operation",
+      "drafts_ijf_d_26_00175_r3_sticky_expectations_theory",
+      "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+      "drafts_ijf_d_26_00175_r3_zhu_timmermann_2022"
+    ],
+    "2": [
+      "drafts_ijf_d_26_00175_r3_caldara_iacoviello_2022",
+      "drafts_ijf_d_26_00175_r3_kilian_2009",
+      "drafts_ijf_d_26_00175_r3_ludvigson_et_al_2021",
+      "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "original_files_ijfr_readme_readme_manuscript_replication"
+    ],
+    "3": [
+      "original_files_ijfr_readme_readme_computing_environment",
+      "original_files_ijfr_readme_readme_dataset_structure",
+      "original_files_ijfr_readme_readme_readme_txt",
+      "original_files_ijfr_readme_readme_reference_results",
+      "original_files_ijfr_readme_readme_supplementary_replication"
+    ],
+    "4": [
+      "drafts_ijf_d_26_00175_r3_manuscript_pdf",
+      "original_files_ijfr_readme_readme_md",
+      "original_files_ijfr_readme_replication_package"
+    ],
+    "5": [
+      "drafts_ijf_d_26_00175_r3_clark_west_2007",
+      "drafts_ijf_d_26_00175_r3_diebold_mariano_1995"
+    ]
+  },
+  "cohesion": {
+    "0": 0.25,
+    "1": 0.2857142857142857,
+    "2": 0.4,
+    "3": 0.4,
+    "4": 0.6666666666666666,
+    "5": 1.0
+  },
+  "gods": [
+    {
+      "id": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "label": "Beta-Binomial Forecasting Algorithm",
+      "degree": 8
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_readme_txt",
+      "label": "Detailed Replication Instructions (readme.txt)",
+      "degree": 6
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "label": "Dynamic Forecast Rotation (DFR)",
+      "degree": 5
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "label": "Set of 18 Monitoring Variables",
+      "degree": 5
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_manuscript_replication",
+      "label": "Manuscript Figures Replication Workflow",
+      "degree": 3
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+      "label": "Windows of Predictability",
+      "degree": 3
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_md",
+      "label": "Replication Package README.md",
+      "degree": 2
+    },
+    {
+      "id": "original_files_ijfr_readme_replication_package",
+      "label": "Replication Package Repository",
+      "degree": 2
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_manuscript_pdf",
+      "label": "A Beta-Binomial Algorithm for Forecasting the Price of Crude Oil",
+      "degree": 2
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_sticky_expectations_theory",
+      "label": "Sticky Expectations Theory",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Manuscript Figures Replication Workflow",
+      "target": "Beta-Binomial Forecasting Algorithm",
+      "source_files": [
+        "original_files/ijfr/readme/readme.txt",
+        "drafts/IJF-D-26-00175_R3.pdf"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ paper); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Manuscript Figures Replication Workflow",
+      "target": "Set of 18 Monitoring Variables",
+      "source_files": [
+        "original_files/ijfr/readme/readme.txt",
+        "drafts/IJF-D-26-00175_R3.pdf"
+      ],
+      "confidence": "INFERRED",
+      "relation": "shares_data_with",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ paper); connects across different repos/directories"
+    },
+    {
+      "source": "A Beta-Binomial Algorithm for Forecasting the Price of Crude Oil",
+      "target": "Replication Package Repository",
+      "source_files": [
+        "drafts/IJF-D-26-00175_R3.pdf",
+        "original_files/ijfr/README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ paper); connects across different repos/directories"
+    },
+    {
+      "source": "Replication Package README.md",
+      "target": "Detailed Replication Instructions (readme.txt)",
+      "source_files": [
+        "original_files/ijfr/README.md",
+        "original_files/ijfr/readme/readme.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `Replication Package README.md` unexpectedly reaches hub `Detailed Replication Instructions (readme.txt)`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Beta-Binomial Forecasting Algorithm` connect `Community 0` to `Community 1`, `Community 2`, `Community 4`?",
+      "why": "High betweenness centrality (0.516) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Dynamic Forecast Rotation (DFR)` connect `Community 1` to `Community 0`, `Community 2`?",
+      "why": "High betweenness centrality (0.380) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Manuscript Figures Replication Workflow` connect `Community 2` to `Community 0`, `Community 3`?",
+      "why": "High betweenness centrality (0.322) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `Manuscript Figures Replication Workflow` (e.g. with `Beta-Binomial Forecasting Algorithm` and `Set of 18 Monitoring Variables`) actually correct?",
+      "why": "`Manuscript Figures Replication Workflow` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Replication Computing Environment`, `Replication Dataset Structure`, `Reference Results and Figures (results.xls)` to the rest of the system?",
+      "why": "15 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

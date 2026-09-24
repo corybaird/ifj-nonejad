@@ -1,0 +1,700 @@
+{
+  "nodes": [
+    {
+      "id": "original_files_ijfr_readme_readme_md",
+      "label": "Replication Package README.md",
+      "file_type": "document",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Nima Nonejad",
+      "contributor": null
+    },
+    {
+      "id": "original_files_ijfr_readme_replication_package",
+      "label": "Replication Package Repository",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/README.md",
+      "source_location": null,
+      "source_url": "https://github.com/nimanonejad/ijfr",
+      "captured_at": null,
+      "author": "Nima Nonejad",
+      "contributor": null,
+      "rationale": "Houses data, MATLAB code, numerical reference results, and MATLAB figure files required to reproduce manuscript and supplementary material results."
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_readme_txt",
+      "label": "Detailed Replication Instructions (readme.txt)",
+      "file_type": "document",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "September 16th 2026",
+      "author": "Nima Nonejad",
+      "contributor": null
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_computing_environment",
+      "label": "Replication Computing Environment",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 16-28",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Developed using MATLAB R2009b with Econometrics Toolbox; no GPU or parallel computing required."
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_dataset_structure",
+      "label": "Replication Dataset Structure",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 67-88",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Publicly available Excel 97-2003 (.xls) workbooks with information sheets; straightforward preprocessing (logarithms) executed directly in MATLAB."
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_reference_results",
+      "label": "Reference Results and Figures (results.xls)",
+      "file_type": "document",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 116-136",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Provides numerical benchmarks in Excel and .fig format to verify script outputs against original computations."
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_manuscript_replication",
+      "label": "Manuscript Figures Replication Workflow",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 138-506",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Step-by-step procedures to run main.m, computation scripts, and figure scripts (Figures 1-7)."
+    },
+    {
+      "id": "original_files_ijfr_readme_readme_supplementary_replication",
+      "label": "Supplementary Material Replication Workflow",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 508-1020",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Procedures to replicate supplementary Table 1 and Figures 1-9 across sensitivity, prior, and alternative asset specifications."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_manuscript_pdf",
+      "label": "A Beta-Binomial Algorithm for Forecasting the Price of Crude Oil",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Nima Nonejad",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "label": "Beta-Binomial Forecasting Algorithm",
+      "file_type": "rationale",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.4",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Nima Nonejad",
+      "contributor": null,
+      "rationale": "Performs real-time selection between the benchmark point forecast and predictive regressions by combining dynamic forecast rotation with Bayesian beta-binomial shrinkage based on past sign-matching performance."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "label": "Dynamic Forecast Rotation (DFR)",
+      "file_type": "rationale",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Models squared point forecast error differences against state-of-the-world monitoring variables to identify ex-ante relative predictability and rotate into/out of predictability windows."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_bayesian_beta_binomial_model",
+      "label": "Bayesian Beta-Binomial Conjugate Model",
+      "file_type": "rationale",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Conjugate prior-likelihood framework that models probability of matching predicted and realized loss differential signs, producing closed-form posterior mean for model cutoff thresholding."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+      "label": "Windows of Predictability",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 3.3, 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Short-lived episodes where financial/geopolitical shocks trigger market inefficiencies and information underreaction, allowing predictive regressions to outperform the random walk."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_sticky_expectations_theory",
+      "label": "Sticky Expectations Theory",
+      "file_type": "rationale",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 3.3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Information processing costs lead agents to update expectations periodically rather than continuously, creating sluggish price adjustment in the wake of economic and geopolitical shocks."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_random_walk_benchmark",
+      "label": "End-of-Month Price Random-Walk Benchmark",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 1, 2.1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Predicts month-t+k oil price using closing price of the last business day of month t; eliminates spurious predictability artifacts of monthly averaging."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_dynamic_linear_model",
+      "label": "Dynamic Linear Model (DLM) Base Predictive Models",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Time-varying parameter regression specification for base predictive models estimated in real time via Kalman filtering."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_net_change_operation",
+      "label": "Net Change Operation",
+      "file_type": "rationale",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Shrinks monitoring variable contributions to zero unless values breach multi-year highs or lows (m=3 years), suppressing noise and preventing spurious forecast rotations."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_spike_and_slab_prior",
+      "label": "Spike-and-Slab Prior Hyperparameter Averaging",
+      "file_type": "rationale",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Ties prior variance to candidate model count N and averages forecasts over candidate prior means weighted by predictive likelihood, eliminating subjective prior tuning."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_wti_crude_oil_price",
+      "label": "Nominal End-of-Month WTI Spot Price",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.1",
+      "source_url": "https://stephensnudden.com/",
+      "captured_at": "1986m1-2024m12",
+      "author": null,
+      "contributor": null,
+      "rationale": "Primary forecast target; nominal price is preferred over real price to prevent measurement errors and distorted forecasts caused by deflators."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "label": "Set of 18 Monitoring Variables",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.3, Table 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "18 series across business conditions, economic uncertainty, equity volatility, and geopolitical risk used to proxy the state of the world in loss differential regressions."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_mccracken_ng_database",
+      "label": "FRED-MD Database of Economic Variables",
+      "file_type": "concept",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.2",
+      "source_url": "https://research.stlouisfed.org/econ/mccracken/fred-databases/",
+      "captured_at": null,
+      "author": "Michael W. McCracken, Serena Ng",
+      "contributor": null,
+      "rationale": "Provides over 120 stationary monthly macroeconomic and financial time series used in the individual base predictive regressions."
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_zhu_timmermann_2022",
+      "label": "Zhu and Timmermann (2022)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Y. Zhu, A. Timmermann",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_ellwanger_snudden_2023",
+      "label": "Ellwanger and Snudden (2023)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "R. Ellwanger, S. Snudden",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_mankiw_reis_2002",
+      "label": "Mankiw and Reis (2002)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "N. G. Mankiw, R. Reis",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_farmer_et_al_2023",
+      "label": "Farmer, Schmidt, and Timmermann (2023)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "L. E. Farmer, L. Schmidt, A. Timmermann",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_clark_west_2007",
+      "label": "Clark and West (2007)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "T. E. Clark, K. D. West",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_diebold_mariano_1995",
+      "label": "Diebold and Mariano (1995)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "F. X. Diebold, R. S. Mariano",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_caldara_iacoviello_2022",
+      "label": "Caldara and Iacoviello (2022)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "D. Caldara, M. Iacoviello",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_kilian_2009",
+      "label": "Kilian (2009)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "L. Kilian",
+      "contributor": null
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_ludvigson_et_al_2021",
+      "label": "Ludvigson, Ma, and Ng (2021)",
+      "file_type": "paper",
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "References",
+      "source_url": null,
+      "captured_at": null,
+      "author": "S. C. Ludvigson, S. Ma, S. Ng",
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "original_files_ijfr_readme_readme_md",
+      "target": "original_files_ijfr_readme_replication_package",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/README.md",
+      "source_location": "Lines 1-6",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_md",
+      "target": "original_files_ijfr_readme_readme_readme_txt",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/README.md",
+      "source_location": "Line 10",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_readme_txt",
+      "target": "original_files_ijfr_readme_readme_computing_environment",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_readme_txt",
+      "target": "original_files_ijfr_readme_readme_dataset_structure",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Section 3",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_readme_txt",
+      "target": "original_files_ijfr_readme_readme_reference_results",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Section 5",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_readme_txt",
+      "target": "original_files_ijfr_readme_readme_manuscript_replication",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 138-506",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_readme_txt",
+      "target": "original_files_ijfr_readme_readme_supplementary_replication",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 508-1020",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_manuscript_pdf",
+      "target": "original_files_ijfr_readme_replication_package",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Cover Letter",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_manuscript_pdf",
+      "target": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "target": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 2.4",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "target": "drafts_ijf_d_26_00175_r3_bayesian_beta_binomial_model",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.3, 2.4",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "target": "drafts_ijf_d_26_00175_r3_dynamic_linear_model",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.1, 2.4",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "target": "drafts_ijf_d_26_00175_r3_random_walk_benchmark",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.4",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "target": "drafts_ijf_d_26_00175_r3_net_change_operation",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "target": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 3.3",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "target": "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+      "target": "drafts_ijf_d_26_00175_r3_sticky_expectations_theory",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 3.3",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "target": "drafts_ijf_d_26_00175_r3_spike_and_slab_prior",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.4",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_dynamic_linear_model",
+      "target": "drafts_ijf_d_26_00175_r3_mccracken_ng_database",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.1, 3.2",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "target": "drafts_ijf_d_26_00175_r3_wti_crude_oil_price",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.1",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+      "target": "drafts_ijf_d_26_00175_r3_zhu_timmermann_2022",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 1, 2.2",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_random_walk_benchmark",
+      "target": "drafts_ijf_d_26_00175_r3_ellwanger_snudden_2023",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 1, 2.1",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_sticky_expectations_theory",
+      "target": "drafts_ijf_d_26_00175_r3_mankiw_reis_2002",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 3.3",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+      "target": "drafts_ijf_d_26_00175_r3_farmer_et_al_2023",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 2.2, 3.3",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "target": "drafts_ijf_d_26_00175_r3_caldara_iacoviello_2022",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.3, Table 1",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "target": "drafts_ijf_d_26_00175_r3_kilian_2009",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.3, Table 1",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "target": "drafts_ijf_d_26_00175_r3_ludvigson_et_al_2021",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 3.3, Table 1",
+      "weight": 1.0
+    },
+    {
+      "source": "drafts_ijf_d_26_00175_r3_clark_west_2007",
+      "target": "drafts_ijf_d_26_00175_r3_diebold_mariano_1995",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf",
+      "source_location": "Section 4.2",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_manuscript_replication",
+      "target": "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 138-506",
+      "weight": 1.0
+    },
+    {
+      "source": "original_files_ijfr_readme_readme_manuscript_replication",
+      "target": "drafts_ijf_d_26_00175_r3_monitoring_variables",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt",
+      "source_location": "Lines 149-153",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "drafts_ijf_d_26_00175_r3_forecasting_pipeline",
+      "label": "Beta-Binomial Dynamic Rotation Forecasting Pipeline",
+      "nodes": [
+        "drafts_ijf_d_26_00175_r3_beta_binomial_algorithm",
+        "drafts_ijf_d_26_00175_r3_dynamic_forecast_rotation",
+        "drafts_ijf_d_26_00175_r3_bayesian_beta_binomial_model",
+        "drafts_ijf_d_26_00175_r3_dynamic_linear_model"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf"
+    },
+    {
+      "id": "drafts_ijf_d_26_00175_r3_predictability_theory_foundation",
+      "label": "Theoretical Foundation of Predictability Windows",
+      "nodes": [
+        "drafts_ijf_d_26_00175_r3_windows_of_predictability",
+        "drafts_ijf_d_26_00175_r3_sticky_expectations_theory",
+        "drafts_ijf_d_26_00175_r3_mankiw_reis_2002",
+        "drafts_ijf_d_26_00175_r3_farmer_et_al_2023"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/drafts/IJF-D-26-00175_R3.pdf"
+    },
+    {
+      "id": "original_files_ijfr_readme_replication_workflow",
+      "label": "Manuscript and Supplementary Replication Architecture",
+      "nodes": [
+        "original_files_ijfr_readme_readme_md",
+        "original_files_ijfr_readme_readme_readme_txt",
+        "original_files_ijfr_readme_readme_manuscript_replication",
+        "original_files_ijfr_readme_readme_supplementary_replication"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/cory/Desktop/ifj-editor/nonejad-2026/original_files/ijfr/readme/readme.txt"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
