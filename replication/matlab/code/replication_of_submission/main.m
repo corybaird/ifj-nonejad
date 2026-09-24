@@ -1,11 +1,10 @@
  
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
-if exist('functions', 'dir'), addpath('functions'); end
-if exist('data', 'dir'), addpath('data'); end
-if exist('../functions', 'dir'), addpath('../functions'); end
-if exist('../data', 'dir'), addpath('../data'); end
 
 %mtstream=RandStream('mt19937ar');
 %RandStream.setDefaultStream(mtstream);
