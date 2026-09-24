@@ -13,7 +13,9 @@
 * Total manuscript figures audited: 7
 * Total supplementary figures audited: 9
 * Total supplementary tables audited: 1
-* Reference results file: `results/results.xls`
+* Reference results file: `reports/results/results.xls`
+* Record of truth: `reports/results/runs/replication_run_20260924_151805/`
+* Discrepancy tracker: `docs/replication/discrepancies.md`
 
 ---
 
@@ -21,13 +23,13 @@
 
 | Artifact | Source Script | Reference Fig | Verification Status | Notes |
 |---|---|---|---|---|
-| Figure 1 | `figure1.m` | `figure1.fig` | Verified against `results.xls` | Numerical values match sheet `figure1` columns 1-6 |
+| Figure 1 | `figure1_computation.m` | `figure1.fig` | Close | All 6 columns rerun; max diff 9e-4; no conclusion flips |
 | Figure 2 | `figure2.m` | `figure2.fig` | Verified from `main.m` outputs | Subplots (3,2,5) and (3,2,6) require manual bar conversion |
 | Figure 3 | `figure3.m` | `figure3.fig` | Verified from `main.m` outputs | Line to bar graphical formatting applied in published version |
-| Figure 4 | `figure4.m` | `figure4.fig` | Verified against `results.xls` | Numerical values match sheet `figure4` columns 1-6 |
-| Figure 5 | `figure5.m` | `figure5.fig` | Verified against `results.xls` | Numerical values match sheet `figure5` columns 1-6 |
+| Figure 4 | `figure_4_computation.m` | `figure4.fig` | Close | ir = 0 and 1 rerun; max diff 3.4e-3 (D5); no conclusion flips |
+| Figure 5 | `figure5_computation.m` | `figure5.fig` | Close | ir = 0 and 1 rerun; max diff 7.4e-3 (D4); no conclusion flips |
 | Figure 6 | `figure6.m` | `figure6.fig` | Verified from `main.m` outputs | Gray shading denotes true positive predictability windows |
-| Figure 7 | `figure7.m` | `figure7.fig` | Verified against `results.xls` | Numerical values match sheet `figure7` columns 1-4 |
+| Figure 7 | `figure7_computation.m` | `figure7.fig` | Close | Both samples rerun; max diff 1.9e-2 in 2 cells (D3); no conclusion flips |
 
 ---
 
@@ -35,15 +37,15 @@
 
 | Artifact | Source Script | Reference Fig | Verification Status | Notes |
 |---|---|---|---|---|
-| Figure 1_supp | `figure1_supp.m` | `figure1_supp.fig` | Verified against `results.xls` | Monte Carlo output matrix 420x21 across $\lambda \in \{1, 1.5, 0.5\}$ |
-| Figure 2_supp | `figure2_supp.m` | `figure2_supp.fig` | Verified against `results.xls` | Lags $p \in \{2, 3\}$ sensitivity metrics |
-| Figure 3_supp | `figure3_supp.m` | `figure3_supp.fig` | Verified against `results.xls` | Alternative horizons $h \in \{3, 6, 12\}$ |
-| Figure 4_supp | `figure4_supp.m` | `figure4_supp.fig` | Verified against `results.xls` | Real crude oil price target series |
-| Figure 5_supp | `figure5_supp.m` | `figure5_supp.fig` | Verified against `results.xls` | Rolling estimation windows (10-year and 15-year) |
-| Figure 6_supp | `figure6_supp.m` | `figure6_supp.fig` | Verified against `results.xls` | Beta prior parameters $(a_0, b_0) \in \{(0.1, 0.1), (2, 2), (20, 1), (20, 0.1)\}$ |
-| Figure 7_supp | `figure7_supp.m` | `figure7_supp.fig` | Verified against `results.xls` | Variance parameter $g \in \{0.005, 0.05, 5, 50, 100\}$ |
-| Figure 8_supp | `figure8_supp.m` | `figure8_supp.fig` | Verified from model `.mat` files | Brent spot and refiner acquisition cost (RAC) series |
-| Figure 9_supp | `figure9_supp.m` | `figure9_supp.fig` | Verified against `results.xls` | Forecast horizons $h \in \{2, 3, 4, 9\}$ |
+| Figure 1_supp | `main_sim.m`, `figure1_supp_computation.m` | `figure1_supp.fig` | Exact except 11 cells | 420x21 across $\lambda \in \{1, 1.5, 0.5\}$; λ = 1 block max diff 4.6e-3 (D6) |
+| Figure 2_supp | `figure2_supp_computation.m` | `figure2_supp.fig` | Close | Both samples; max diff 6e-4 |
+| Figure 3_supp | `figure3_supp_computation.m` | `figure3_supp.fig` | Close | Both samples; max diff 8e-4 |
+| Figure 4_supp | `main_real.m`, `figure4_supp_computation.m` | `figure4_supp.fig` | **Does not replicate** | Real price; max diff 0.22; 19 conclusion flips; TU < 1 holds (D1) |
+| Figure 5_supp | `figure5_supp_computation.m` | `figure5_supp.fig` | Close | Both samples; max diff 9e-4 |
+| Figure 6_supp | `figure6_supp_computation.m` | `figure6_supp.fig` | Close | All 4 Beta priors; max diff 6e-4 |
+| Figure 7_supp | `main_prior.m`, `figure7_supp_computation.m` | `figure7_supp.fig` | Close | $g \in \{0.05, 0.5, 5, 50, 100\}$; g = 5 row max diff 3.7e-3 (D2) |
+| Figure 8_supp | `figure8_supp.m` | `figure8_supp.fig` | Visual match (b), (d) | Recomputed from `brent_1.mat`, `rac_1.mat`; (a), (c) axis scaling differs (D8) |
+| Figure 9_supp | `main_for.m`, `figure9_supp_computation.m`, `main_exp.m` | `figure9_supp.fig` | Exact | $h \in \{2, 3, 4, 9\}$; max diff 4e-5; panels (c), (d) recomputed from `exp_1.mat` |
 
 ---
 
@@ -51,11 +53,13 @@
 
 | Artifact | Source Script | Reference Sheet | Verification Status | Notes |
 |---|---|---|---|---|
-| Table 1_supp | `table1_supp.m` | `table1_supp` | Verified against `results.xls` | Simple model averaging (SMA) and Bayesian model averaging (BMA) comparison |
+| Table 1_supp | `table1_supp.m` | `table1_supp` | Exact | Both samples; max diff 5e-5 |
 
 ---
 
 ## 1.5 Numerical Benchmark Discrepancy Accounting
-* Zero numerical discrepancies detected between generated computation scripts and `results.xls` values
-* All test statistics (Clark-West and Diebold-Mariano) reproduce to published decimal precision
-* Minor graphical formatting differences (font weights, tick marks, bar vs line presentation) reflect post-processing adjustments documented in `readme.txt`
+* 1,056 non-simulation cells and 8,820 simulation cells compared against `results.xls`
+* 19 conclusion flips (p-value crossing 1%, 5% or 10%), all in Figure 4_supp
+* No TU ratio crosses 1 in any block
+* Estimation stage matches the author-shipped `wti_4.mat` to about 1e-8; remaining drift enters after estimation
+* Full itemization in `docs/replication/discrepancies.md`
