@@ -1,14 +1,11 @@
 
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 close all
 
-if exist('functions', 'dir'), addpath('functions'); end
-if exist('data', 'dir'), addpath('data'); end
-if exist('results', 'dir'), addpath('results'); end
-if exist('../functions', 'dir'), addpath('../functions'); end
-if exist('../data', 'dir'), addpath('../data'); end
-if exist('../results', 'dir'), addpath('../results'); end
 
 mc=xlsread('results.xls','figure4');
 mc=mc(1:18,:);
