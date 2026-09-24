@@ -1,9 +1,10 @@
  
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
-addpath('functions')
-addpath('data')
 
 %mtstream=RandStream('mt19937ar');
 %RandStream.setDefaultStream(mtstream);
@@ -11,7 +12,7 @@ addpath('data')
 N=1; 
 LASTN=maxNumCompThreads(N);
 
-dg=0.005; %You need to run main for each dg value of [0.005,0.05,5,50,100] and save the ouput using a distinct name
+dg=replication_setting('dg',0.05); %You need to run main for each dg value of [0.05,0.5,5,50,100] (grid on the x-axis of figure7_supp.fig) and save the ouput using a distinct name
 ih=1; %Forecast horizon
 ip=1; 
 dalpha=1;
@@ -95,5 +96,5 @@ for k=1
     vh=vh(size(vh,1)-size(meps,1)+1:end,:);
     vh=funcMeanc(vh);
     moutc=funcDynamicRotation(meps,mpof,mpdf,mcvl,vh(1:end-ih,1),vlambda,vgam,ih,dalpha);
-    eval(['save wti_prior_',int2str(k),'.mat'])    
+    eval(['save wti_prior_',int2str(replication_setting('prior_idx',k)),'.mat'])    
 end

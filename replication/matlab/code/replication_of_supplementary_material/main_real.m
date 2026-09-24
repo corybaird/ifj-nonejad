@@ -1,9 +1,10 @@
  
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
-addpath('functions')
-addpath('data')
 
 %mtstream=RandStream('mt19937ar');
 %RandStream.setDefaultStream(mtstream);
@@ -90,7 +91,7 @@ end
 mpof(:,end)=0;
 meps(:,end)=cmodel{end,1}.vy.^2;
 %for k=[1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19] %the part does the loop over all predictors, which takes time
-for k=4 %here, I have just sat k=4 so I can show you replication results using the fourth monitoring variable.
+for k=replication_setting('real_k',4) %here, I have just sat k=4 so I can show you replication results using the fourth monitoring variable.
     vh=mzc(:,k);
     vh=vh(size(vh,1)-size(meps,1)+1:end,:);
     vh=funcMeanc(vh);

@@ -1,9 +1,10 @@
  
 clear all
+repl_root=fullfile(fileparts(mfilename('fullpath')),'..','..');
+if isempty(fileparts(mfilename('fullpath'))), repl_root=fullfile(pwd,'..','..'); end
+addpath(fullfile(repl_root,'code','functions'),fullfile(repl_root,'data'),fullfile(repl_root,'reports','results'),fullfile(repl_root,'code','replication_of_submission'));
 clc
 
-addpath('functions')
-addpath('data')
 
 %mtstream=RandStream('mt19937ar');
 %RandStream.setDefaultStream(mtstream);
@@ -11,7 +12,7 @@ addpath('data')
 N=1; 
 LASTN=maxNumCompThreads(N);
 
-ih=2; %Forecast horizon h=2,3,4,9
+ih=replication_setting('ih',2); %Forecast horizon h=2,3,4,9
 ip=1; 
 dalpha=1;
 ml=combvec(0.94:0.01:1,50); %The first is vector of lambda, and the second g=50. change if you want
