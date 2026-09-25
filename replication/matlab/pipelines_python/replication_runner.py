@@ -76,7 +76,7 @@ class ReplicationRunner:
 
     def _reference_png_command(self) -> str:
         fig_dir = (MATLAB_ROOT / self.config['reference_figs']).resolve()
-        return f"d=dir(fullfile('{fig_dir}','*.fig')); for i=1:numel(d), f=openfig(fullfile(d(i).folder,d(i).name),'invisible'); [~,s]=fileparts(d(i).name); saveas(f,fullfile('{self.plots_dir}',[s '_reference.png'])); close(f); end"
+        return f"addpath('{self.code_root / 'functions'}'); export_reference_png('{fig_dir}','{self.plots_dir}');"
 
     def _compare_all(self) -> pd.DataFrame:
         sheets = pd.read_excel(MATLAB_ROOT / self.config['results_file'], sheet_name=None, header=None)
