@@ -1,5 +1,7 @@
 # Ignore temporary and binary artifacts
 reports/figures/
+reports/plots/
+*.png
 data/raw/
 data/processed/
 data/pipeline/
