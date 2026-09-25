@@ -13,7 +13,7 @@ scatter(mc(:,1),mc(:,2),50,'b','filled')
 hold on
 plot([1,1],[0, 1.0],'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
-xlim([0.945, 0.98]); ylim([0, 1.0]);
+xlim([0.95, 1.02]); ylim([0, 1.0]);
 xlabel('TU'); ylabel('CW p-value');
 title('(a): 1990m1-2024m12 out-of-sample period.');
 
@@ -22,7 +22,7 @@ scatter(mc(:,1),mc(:,3),50,'b','filled')
 hold on
 plot([1,1],[0, 1.0],'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
-xlim([0.945, 0.98]); ylim([0, 1.0]);
+xlim([0.95, 1.02]); ylim([0, 1.0]);
 xlabel('TU'); ylabel('DM p-value');
 title('(b): 1990m1-2024m12 out-of-sample period.');
 
@@ -31,7 +31,7 @@ scatter(mc(:,4),mc(:,5),50,'b','filled')
 hold on
 plot([1,1],[0, 1.0],'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
-xlim([0.945, 0.98]); ylim([0, 1.0]);
+xlim([0.95, 1.02]); ylim([0, 1.0]);
 xlabel('TU'); ylabel('CW p-value');
 title('(c): 1990m1-2019m12 out-of-sample period.');
 
@@ -40,7 +40,7 @@ scatter(mc(:,4),mc(:,6),50,'b','filled')
 hold on
 plot([1,1],[0, 1.0],'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
-xlim([0.945, 0.98]); ylim([0, 1.0]);
+xlim([0.95, 1.02]); ylim([0, 1.0]);
 xlabel('TU'); ylabel('DM p-value');
 title('(d): 1990m1-2019m12 out-of-sample period.');
  

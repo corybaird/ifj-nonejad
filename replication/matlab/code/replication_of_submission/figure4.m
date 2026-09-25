@@ -12,6 +12,7 @@ mc=mc(1:18,:);
 
 subplot(2,2,1)
 scatter(mc(:,1),mc(:,2),50,'b','filled')
+xlim([0.95, 1.02]); ylim([0, 1.0]);
 hold on
 plot([1,1],get(gca,'ylim'),'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
@@ -20,6 +21,7 @@ title('(a): Expansion periods in the United States as defined by NBER.');
 
 subplot(2,2,2)
 scatter(mc(:,1),mc(:,3),50,'b','filled')
+xlim([0.95, 1.02]); ylim([0, 1.0]);
 hold on
 plot([1,1],get(gca,'ylim'),'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
@@ -28,6 +30,7 @@ title('(b): Expansion periods in the United States as defined by NBER.');
 
 subplot(2,2,3)
 scatter(mc(:,4),mc(:,5),50,'b','filled')
+xlim([0.90, 1.02]); ylim([0, 1.0]);
 hold on
 plot([1,1],get(gca,'ylim'),'k:')
 plot(xlim,[0.1,0.1],'k--','LineWidth',2)
@@ -36,9 +39,10 @@ title('(c): Recession periods in the United States as defined by NBER.');
 
 subplot(2,2,4)
 scatter(mc(:,4),mc(:,6),50,'b','filled')
+xlim([0.90, 1.02]); ylim([0, 1.0]);
 hold on
 plot([1,1],get(gca,'ylim'),'k:')
-plot(xlim,[0.2,0.2],'k--','LineWidth',2)
+plot(xlim,[0.1,0.1],'k--','LineWidth',2)
 xlabel('TU'); ylabel('DM p-value');
 title('(d): Recession periods in the United States as defined by NBER.');
  
