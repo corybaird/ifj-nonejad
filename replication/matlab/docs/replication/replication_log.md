@@ -112,6 +112,24 @@ Numerical match against `results.xls` (all sheet columns, both toggles):
 | D6 | Figure 1_supp | λ = 1 block, 11 of 2,940 cells | 0.0046 | n/a (simulation) | Minor | Unexplained |
 | D7 | Figures 1, 5, 7, 2_supp, 3_supp, 5_supp, 6_supp | scattered p-values | below 1e-3 | 0 | Minor | 4th decimal drift |
 | D8 | Figure 8_supp panels (a), (c) and Figure 9_supp panel (c) | y-axis scaling | n/a | 0 | Cosmetic | Author set axes manually (readme) |
+| D9 | Figures 1 to 4 (main text) | axis limits and tick formatting | n/a | 0 | Cosmetic | R2009b vs R2025b tick defaults and author post-processing (readme) |
+
+#### D9 detail (Figures 1 to 4 graphical presentation)
+* Author disclosure (`readme.txt` lines 132-135): titles, labels, tick marks, and line-to-bar transformations adjusted manually post-computation for final publication
+* Figure 1:
+  * Manuscript PDF sets `xlim([0.95, 1.02])` displaying the dashed vertical line at `TU = 1.00`; points cluster in left half (`TU` ranges from `0.948` to `0.968`)
+  * Upstream `figure1.m` hardcodes `xlim([0.945, 0.98])`; truncates `TU = 1.00` line off-screen and stretches points across full frame
+  * Underlying numerical points in `results.xls` sheet `figure1` match manuscript PDF exactly
+* Figure 2:
+  * Time series curves and bar heights bit-identical to manuscript PDF
+  * MATLAB R2025b automatic tick generation produces fewer ticks (`0, 0.1, 0.2` and `0.9, 1`) compared to author's manually formatted 2-decimal ticks (`0.00` to `0.30` by `0.06`, and `0.90` to `1.05` by `0.03`)
+* Figure 3:
+  * Selection frequencies and bar heights bit-identical to manuscript PDF
+  * MATLAB R2025b default ticks produce `0, 0.1, 0.2, 0.3` without trailing zeroes; published PDF and reference `.fig` have 6 ticks (`0.00, 0.06, 0.12, 0.18, 0.24, 0.30`)
+* Figure 4:
+  * Reference asset `figure4_reference.png` was visually corrupted during headless export of legacy R2009b `.fig` in modern MATLAB; subplots (a) and (b) rendered on top of each other with overlapping titles and axes
+  * Upstream `figure4.fig` contained dummy marker `(1.2, 1.2)` (row 19 in `results.xls`) used by author to force axis scaling in R2009b
+  * `figure4_reproduced.png` filters row 19; numerical scatter coordinates match manuscript PDF page 38 exactly (outlier `TU = 0.9965, CW = 0.3616` and recession outliers `0.3083, 0.3088` match bit for bit)
 
 #### D1 detail
 * TU < 1 for all 18 predictors in both reference and reproduction (2024 and 2019 samples)

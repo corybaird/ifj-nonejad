@@ -31,10 +31,10 @@
 
 | Manuscript Figure | Numerical & Structural Notes | Figure Source File |
 | :--- | :--- | :--- |
-| **Figure 1** | Scatter of TU vs CW/DM p-values; points match `results.xls` within Excel 4-decimal precision | `code/replication_of_submission/figure1.m` |
-| **Figure 2** | Multi-panel time series of posterior model probabilities and recession bands | `code/replication_of_submission/figure2.m` |
-| **Figure 3** | Annual predictor selection frequencies; bars match original frequencies | `code/replication_of_submission/figure3.m` |
-| **Figure 4** | Macroeconomic uncertainty regime splits; dummy marker row 19 filtered | `code/replication_of_submission/figure4.m` |
+| **Figure 1** | Scatter of TU vs CW/DM p-values; points match `results.xls` within Excel 4-decimal precision; x-axis cropped to 0.98 in script vs 1.02 in draft PDF (D9 in `replication_log.md`) | `code/replication_of_submission/figure1.m` |
+| **Figure 2** | Multi-panel time series of posterior model probabilities and recession bands; R2025b automatic tick decimation vs manual author 2-decimal ticks (D9 in `replication_log.md`) | `code/replication_of_submission/figure2.m` |
+| **Figure 3** | Annual predictor selection frequencies; bars match original frequencies; tick formatting differs between R2025b and published PDF (D9 in `replication_log.md`) | `code/replication_of_submission/figure3.m` |
+| **Figure 4** | Macroeconomic uncertainty regime splits; dummy marker row 19 filtered; reference asset corrupted by headless legacy fig export; numerical coordinates exact (D9 in `replication_log.md`) | `code/replication_of_submission/figure4.m` |
 | **Figure 5** | Real economic activity regime splits; dummy marker row 19 filtered | `code/replication_of_submission/figure5.m` |
 | **Figure 6** | Cumulative squared forecast error differences with NBER recession shading | `code/replication_of_submission/figure6.m` |
 | **Figure 7** | Downside risk and economic value metrics across 18 predictive models | `code/replication_of_submission/figure7.m` |
