@@ -26,11 +26,11 @@ Working checklist for the manual pass through `drafts/IJF-D-26-00175_R3.pdf`. Ch
 | Item                                        | Checked | Notes                                                                          |
 | ------------------------------------------- | ------- | ------------------------------------------------------------------------------ |
 | Table 1 (18 monitoring variables)           | [ ]     | NA                                                                             |
-| Figure 1 (TU vs CW/DM p-values)             | [x]     | Verified; x-axis cropped to 0.98 in script vs 1.02 in draft PDF; all points match results.xls exactly (D9) |
+| Figure 1 (TU vs CW/DM p-values)             | [x]     | Verified; points match results.xls exactly; script xlim clipped TU > 0.98 and reference PNG axes were mislabelled, both fixed (R11, R12) |
 | Figure 2 (classification rates, rolling TU) | [x]     | Verified; R2025b auto-tick decimation vs author 2-decimal ticks; values and curves bit-identical (D9)       |
 | Figure 3 (selection frequencies)            | [x]     | Verified; tick formatting difference between R2025b and published PDF; bar frequencies exact (D9)           |
-| Figure 4 (uncertainty regime splits)        | [x]     | Verified; reference PNG was corrupted by headless fig export; reproduced points match PDF page 38 exact (D9) |
-| Figure 5 (real activity regime splits)      | [ ]     | Minor numerical drift, ir = 0 cells to 7.4e-3 (D4); no conclusion change       |
+| Figure 4 (uncertainty regime splits)        | [x]     | Verified; reference PNG axes were mislabelled (not corrupted) and script limits differed from PDF, both fixed (R11, R13); points match PDF page 38 |
+| Figure 5 (real activity regime splits)      | [ ]     | Minor numerical drift, ir = 0 cells to 7.4e-3 (D4); no conclusion change; reference PNG axes fixed (R11) |
 | Figure 6 (cumulative error differences)     | [ ]     |                                                                                |
 | Figure 7 (downside risk, Sharpe)            | [ ]     | Two cells differ by up to 1.9e-2 (D3); no conclusion change                    |
 

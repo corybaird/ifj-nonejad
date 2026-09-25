@@ -19,15 +19,15 @@
 
 ## 1.2 Manuscript Figures Comparison (Figures 1 to 7)
 
-| Manuscript Figure | Original Asset | Reproduced Asset |
-| :--- | :--- | :--- |
-| **Figure 1** | ![orig](../../reports/plots/figure1_reference.png) | ![repro](../../reports/plots/figure1_reproduced.png) |
-| **Figure 2** | ![orig](../../reports/plots/figure2_reference.png) | ![repro](../../reports/plots/figure2_reproduced.png) |
-| **Figure 3** | ![orig](../../reports/plots/figure3_reference.png) | ![repro](../../reports/plots/figure3_reproduced.png) |
-| **Figure 4** | ![orig](../../reports/plots/figure4_reference.png) | ![repro](../../reports/plots/figure4_reproduced.png) |
-| **Figure 5** | ![orig](../../reports/plots/figure5_reference.png) | ![repro](../../reports/plots/figure5_reproduced.png) |
-| **Figure 6** | ![orig](../../reports/plots/figure6_reference.png) | ![repro](../../reports/plots/figure6_reproduced.png) |
-| **Figure 7** | ![orig](../../reports/plots/figure7_reference.png) | ![repro](../../reports/plots/figure7_reproduced.png) |
+| Manuscript Figure | Original Asset                                     | Reproduced Asset                                     |
+| :---------------- | :------------------------------------------------- | :--------------------------------------------------- |
+| **Figure 1**      | ![orig](../../reports/plots/figure1_reference.png) | ![repro](../../reports/plots/figure1_reproduced.png) |
+| **Figure 2**      | ![orig](../../reports/plots/figure2_reference.png) | ![repro](../../reports/plots/figure2_reproduced.png) |
+| **Figure 3**      | ![orig](../../reports/plots/figure3_reference.png) | ![repro](../../reports/plots/figure3_reproduced.png) |
+| **Figure 4**      | ![orig](../../reports/plots/figure4_reference.png) | ![repro](../../reports/plots/figure4_reproduced.png) |
+| **Figure 5**      | ![orig](../../reports/plots/figure5_reference.png) | ![repro](../../reports/plots/figure5_reproduced.png) |
+| **Figure 6**      | ![orig](../../reports/plots/figure6_reference.png) | ![repro](../../reports/plots/figure6_reproduced.png) |
+| **Figure 7**      | ![orig](../../reports/plots/figure7_reference.png) | ![repro](../../reports/plots/figure7_reproduced.png) |
 
 | Manuscript Figure | Numerical & Structural Notes | Figure Source File |
 | :--- | :--- | :--- |
