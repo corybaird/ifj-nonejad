@@ -41,6 +41,7 @@
   * Forgetting factor vector: $\lambda \in [0.94, 1.00]$ in steps of 0.01
   * Variance parameter: $g = 50$
   * Total grid size: 7 parameter pairs
+* Contrast with DSGE MCMC: no Metropolis-Hastings chains or sampling proposals; all updates are deterministic analytical recursions
 
 ---
 
