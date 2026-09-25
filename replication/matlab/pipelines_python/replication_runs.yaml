@@ -95,8 +95,12 @@ computations:
   - {name: figure9_supp_h4, dir: replication_of_supplementary_material, script: figure9_supp_computation, env: {IH: "4"}, sheet: figure9_supp, dst_rows: [3], src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
   - {name: figure9_supp_h9, dir: replication_of_supplementary_material, script: figure9_supp_computation, env: {IH: "9"}, sheet: figure9_supp, dst_rows: [4], src_cols: [1, 2, 3], dst_cols: [1, 2, 3]}
 
-# Phase 3: scripts whose figure is recomputed from .mat files and has no results.xls sheet.
+# Phase 3: plot scripts. Figures 1, 4, 5 and 7 plot from results.xls; the rest are recomputed from .mat files.
 figures:
+  - {name: figure1, dir: replication_of_submission, script: figure1, output: figure1_reproduced.png}
+  - {name: figure4, dir: replication_of_submission, script: figure4, output: figure4_reproduced.png}
+  - {name: figure5, dir: replication_of_submission, script: figure5, output: figure5_reproduced.png}
+  - {name: figure7, dir: replication_of_submission, script: figure7, output: figure7_reproduced.png}
   - {name: figure8_supp, dir: replication_of_supplementary_material, script: figure8_supp, output: figure8_supp_reproduced.png}
   - {name: figure2, dir: replication_of_submission, script: figure2, output: figure2_reproduced.png}
   - {name: figure3, dir: replication_of_submission, script: figure3, output: figure3_reproduced.png}
